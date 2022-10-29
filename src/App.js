@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import './App.css';
-import Contacts from './pages/Contacts';
 import Fallback from './pages/Fallback';
 
 import Home from './pages/Home';
@@ -38,10 +37,6 @@ function App() {
 							</React.Suspense>
 						}
 					/>
-					<Route path="/contacts">
-						<Route index element={<Contacts />} />
-					</Route>
-
 					<Route path="*" element={<Notfound />} />
 				</Routes>
 			</ErrorBoundary>
